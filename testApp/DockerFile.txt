@@ -1,5 +1,5 @@
 # Getting base image windows
 FROM openjdk:8
-ADD target/testApp-testApp.jar testApp-testApp.jar
+COPY ["build/libs/testApp-testApp.jar","testApp-testApp.jar"]
 EXPOSE 8085
 ENTRYPOINT ["java","-jar","testApp-testApp.jar"]
